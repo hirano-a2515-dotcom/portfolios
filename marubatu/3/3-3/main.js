@@ -33,11 +33,11 @@ for (let row = 0; row < 3; row++) {
 function putMark(row, col) {
     const cell = document.querySelector(`#cell_${row}_${col}`);
     if (turn === 1) {
-        cell.textContent = "〇";
+        cell.textContent = "!";
         cell.classList.add("o");
         cells[row][col] = 1;
     } else {
-        cell.textContent = "✕";
+        cell.textContent = "?";
         cell.classList.add("x");
         cells[row][col] = -1;
     }
@@ -49,10 +49,10 @@ function check() {
     const message = document.querySelector("#message");
     switch (result) {
         case WIN_PLAYER_1:
-            message.textContent = "〇の勝ち!";
+            message.textContent = "!の勝ち!";
             break;
         case WIN_PLAYER_2:
-            message.textContent = "✕の勝ち!";
+            message.textContent = "?の勝ち!";
             break;
         case DRAW_GAME:
             message.textContent = "引き分け!";
