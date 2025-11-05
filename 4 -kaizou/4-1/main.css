@@ -1,0 +1,99 @@
+body {
+    background-color: rgba(255, 255, 247, 1);
+    background-image: url(./images/court.png);
+    background-position: center top -130px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    place-items: center;
+    padding-top: 150px;
+}
+
+#result {
+    border: 8px ridge rgba(220, 138, 50, 0.5);
+    background-color: whitesmoke;
+    min-width: 480px;
+    text-align: center;
+    font-family: serif;
+    font-weight: bolder;
+    font-size: 64px;
+}
+
+#dajare {
+    display: flex;
+    flex-flow: column;
+    margin: 12px;
+}
+
+#message,
+#button {
+    margin: 4px;
+    font-size: 48px;
+    vertical-align: middle;
+    border-color: rgba(220, 138, 50, 0.5);
+    border-radius: 8px;
+}
+
+#judges {
+    display: flex;
+}
+
+.judge {
+    background-size: cover;
+    height: 300px;
+    width: 210px;
+}
+
+.judge.wait.aohebi {
+    /* 審議ネコ１待機 */
+    background-image: url(images/aohebi.png);
+}
+
+.judge.wait.kiirohebi {
+    /* 審議ネコ２待機 */
+    background-image: url(images/kiirohebi.png);
+}
+
+.judge.wait.tatu {
+    /* 審議ネコ３待機 */
+    background-image: url(images/tatu.png);
+}
+
+.judge.ok.aohebi {
+    background-image: url(./images/syuku.png);
+}
+
+.judge.ok.kiirohebi {
+    background-image: url(./images/syuku.png);
+}
+
+.judge.ok.tatu {
+    background-image: url(./images/syuku.png);
+}
+
+.judge.ng.aohebi {
+    background-image: url(./images/circle-9.png);
+}
+
+.judge.ng.kiirohebi {
+    background-image: url(./images/circle-9.png);
+}
+
+.judge.ng.tatu {
+    background-image: url(./images/circle-9.png);
+}
+
+.kurukuru {
+    animation: spin 1s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(-90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
